@@ -26,7 +26,7 @@ kubectl get service birds
 
 # forward the port for the pod
 kubectl port-forward pod/[pod-name] [service-port]:5000
-Application should be available at: http://127.0.0.1:<service-port>
+Application should be available at: http://127.0.0.1:[service-port]
 
 # Note - the sqlite database seems to be a bit off.  Most of the states are fine, but from Maryland to Oregon the state names don't match the abbreviation - 
 # Up to Maine and after Oregon (Pennsylvania is next) the names and abbreviations match
