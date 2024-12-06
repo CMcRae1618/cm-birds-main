@@ -21,11 +21,11 @@ helm install birds . (or upgrade if already deployed)
 # Get the pod name
 kubectl get pods
 
-# Get the IP to be forwarded - PORT(S)
+# Get the service port to be forwarded - PORT(S)
 kubectl get service birds
 
 # forward the port for the pod
-kubectl port-forward pod/<pod-name> <service-port>:5000
+kubectl port-forward pod/[pod-name] [service-port]:5000
 Application should be available at: http://127.0.0.1:<service-port>
 
 # Note - the sqlite database seems to be a bit off.  Most of the states are fine, but from Maryland to Oregon the state names don't match the abbreviation - 
